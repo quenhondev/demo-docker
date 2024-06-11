@@ -16,6 +16,6 @@ COPY . .
 RUN composer install
 USER root
 RUN chmod 777 -R /var/www/app
-RUN chơn -R www-data:www-data /var/www/app
+RUN chown -R www-data:www-data /var/www/app
 EXPOSE 9000
 CMD ["php-fpm"]
